@@ -2,15 +2,15 @@
 import Logo from "@/assets/Logo.astro";
 ---
 
-<header class="fixed top-0 right-0 left-0 z-10 flex justify-center">
-  <div class="flex w-full max-w-7xl items-center justify-between px-4 py-8">
+<header class="sticky top-0 right-0 left-0 z-10 flex justify-center">
+  <div class="flex w-full max-w-7xl items-center justify-between px-4 pt-8 pb-4">
     <a href="/" class="text-brand"><Logo class="h-8" /></a>
 
-    <nav class="flex [&>a]:px-4 [&>a]:py-2">
-      <a href="/">Inicio</a>
-      <a href="/servicios">Servicios</a>
-      <a href="/sobre-nosotros">Sobre nosotros</a>
-      <a href="/contacto">Contacto</a>
+    <nav class="hidden md:flex [&>a]:px-4 [&>a]:py-2">
+      <a href="/" class="border-b-2 border-transparent hover:border-brand transition-all">Inicio</a>
+      <a href="/servicios" class="border-b-2 border-transparent hover:border-brand transition-all">Servicios</a>
+      <a href="/sobre-nosotros" class="border-b-2 border-transparent hover:border-brand transition-all">Sobre nosotros</a>
+      <a href="/contacto" class="bg-brand rounded-full hover:scale-105 transition-transform text-gray-950 font-medium ml-4">Contacto</a>
     </nav>
   </div>
 </header>
