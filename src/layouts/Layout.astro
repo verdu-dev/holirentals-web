@@ -1,6 +1,10 @@
 ---
 import "@/styles/global.css";
+import "@fontsource-variable/playfair-display";
+import "@fontsource-variable/inter";
+
 import { metadata } from "../lib/metadata";
+import Header from "@/components/Header.astro";
 
 const { title, description, image, name } = metadata;
 const {
@@ -72,7 +76,8 @@ const canonicalUrl = new URL(pathname, site).href;
     </script>
   </head>
   <body class="bg-gray-950 text-gray-100">
-    <main class="flex min-h-svh flex-col overflow-hidden">
+    <Header />
+    <main class="flex min-h-svh flex-col items-center overflow-hidden">
       <slot />
     </main>
   </body>

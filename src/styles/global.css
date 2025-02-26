@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand: #fd5a61;
+  --font-sans: "Inter Variable";
+  --font-serif: "Playfair Display Variable";
+}
+
 :root {
   @apply scroll-smooth;
 }
