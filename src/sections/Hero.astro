@@ -1,6 +1,9 @@
 <section
-  class="relative flex w-full flex-1 flex-col items-center justify-center"
+  class="relative z-20 flex h-[calc(100svh-90px)] w-full flex-col items-center justify-center"
 >
+  <div class="absolute left-0 -z-10 size-full rounded-4xl p-4">
+    <div class="flex size-full bg-gray-950 shadow-2xl shadow-black"></div>
+  </div>
   <video
     src="bg.mp4"
     class="absolute left-0 -z-10 size-full rounded-4xl object-cover p-4 opacity-20"
@@ -11,7 +14,9 @@
   >
   </video>
 
-  <div class="text-center flex w-full max-w-7xl flex-col items-center justify-center p-8">
+  <div
+    class="flex w-full max-w-7xl flex-col items-center justify-center p-8 text-center"
+  >
     <h1 class="font-serif text-4xl md:text-6xl">
       Gestión integral de tu <span class="text-brand">vivienda turística</span>,
       sin complicaciones
@@ -24,11 +29,15 @@
     <div class="mt-16 flex flex-wrap items-center gap-2 text-center">
       <a
         href=""
-        class="bg-brand rounded-full w-full md:w-auto px-6 py-3 font-medium text-gray-950 hover:scale-105 transition-transform"
+        class="bg-brand w-full rounded-full px-6 py-3 font-medium text-gray-950 transition-transform hover:scale-105 md:w-auto"
       >
         Solicitar Información
       </a>
-      <a href="" class="w-full md:w-auto px-6 py-3 font-medium hover:scale-105 transition-transform">Contactar con nosotros</a>
+      <a
+        href=""
+        class="w-full px-6 py-3 font-medium transition-transform hover:scale-105 md:w-auto"
+        >Contactar con nosotros</a
+      >
     </div>
   </div>
 </section>
