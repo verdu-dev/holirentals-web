@@ -1,0 +1,21 @@
+---
+import Logo from "@/assets/Logo.astro";
+---
+
+<footer
+  class="flex justify-center border-t border-gray-800 py-10 bg-gray-900"
+>
+  <div
+    class="flex w-full max-w-7xl flex-col items-center justify-between gap-4 px-6 lg:flex-row"
+  >
+    <Logo class="h-6" />
+
+    <p class="text-center text-sm text-gray-300">
+      Aviso legal: esta web no recopila datos personales ni cookies de terceros
+      | Holirentals ©
+      <script is:inline>
+        document.write(new Date().getFullYear());
+      </script>
+    </p>
+  </div>
+</footer>
