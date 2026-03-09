@@ -20,7 +20,7 @@ import Menu from "@/assets/Menu.astro";
     </button>
 
     <nav
-      class="pointer-events-none md:pointer-events-auto fixed top-0 left-0 flex size-full flex-col gap-6 bg-gray-950 p-6 pt-32 text-center opacity-0 transition-opacity md:relative md:inset-auto md:size-auto md:flex-row md:gap-0 md:bg-none md:p-0 md:opacity-100"
+      class="pointer-events-none fixed top-0 left-0 flex size-full flex-col gap-6 bg-gray-950 p-6 pt-32 text-center opacity-0 transition-opacity md:pointer-events-auto md:relative md:inset-auto md:size-auto md:flex-row md:gap-0 md:bg-none md:p-0 md:opacity-100"
     >
       <a
         href="/"
@@ -77,8 +77,17 @@ import Menu from "@/assets/Menu.astro";
 <script>
   const button = document.querySelector("header button") as HTMLButtonElement;
   const nav = document.querySelector("header nav") as HTMLElement;
+  const links = nav.querySelectorAll("a");
+
+  function closeMenu() {
+    nav.classList.remove("open");
+  }
 
   button.addEventListener("click", () => {
     nav.classList.toggle("open");
+  });
+
+  links.forEach((link) => {
+    link.addEventListener("click", closeMenu);
   });
 </script>
